@@ -46,3 +46,13 @@ make:model crea una nueva clase para representar un modelo de Eloquent.
 Cuando creamos las bases de datos es estándar que las tablas tengan el nombre en plural pero los modelos como representan una clase que representa un objeto, tendrán su nombre en singular.
 Todos los modelos los podremos encontrar dentro de la carpeta app. Laravel no tiene carpeta models porque los creadores creen que model puede tener muchos significados.
 El comando tinker nos ofrece un entorno de pruebas para ver cómo funcionan las cosas que estamos haciendo. Tiene en cuenta variables de entorno, lo que inicializa Laravel y también sabe que estamos usando Eloquent.
+
+php artisan make:model ExpenseReport
+php artisan tinker
+>>> App\expenseReport::all();
+>>> $report = new App\ExpenseReport();
+>>> $report->save();
+
+Trabajando con un Modelo
+No es aconsejable modificar una migración ya que si estamos trabajando en equipo alguien puede haber ya corrido la migración con anterioridad y esto le causaría conflictos. Lo aconsejable es crear una migración adicional.
+El comando migrate:fresh lo reinicia todo incluyendo la base de datos y los elementos creados.
