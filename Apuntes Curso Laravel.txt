@@ -72,3 +72,9 @@ destroy: Eliminará los elementos.
 En route:list podremos ver todas las rutas que tenemos definidas
 
 Para crear una ruta de un controlador resource no usamos get o post, sino directamente la estructura Route::resource(); ya que de esta manera se nos crearán rutas para cada uno de los métodos anteriormente mencionados que son creados por el controlador resource.
+
+Blade layout
+Cuando se tienen muchas vistas que repiten gran parte del código HTML, una mejor práctica para evitar esta repetición es crear layouts y extender de ellos. De esta manera el layout tendrá el contenido que siempre se repite y los hijos el código específico de ellos.
+
+@yield marca la parte en donde irá el código de los hijos que extiendan o hereden del layout.
+En las vistas hijas se utiliza @section para decir que esa parte del código es la que concuerda con el @yield del layout.
