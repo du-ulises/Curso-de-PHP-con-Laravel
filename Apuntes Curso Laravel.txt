@@ -88,3 +88,8 @@ Cuando estamos guardando nuevas entradas en la base de datos podemos redireccion
 Estamos trabajando con Middlewares los cuales son muy usados en aplicaciones web que consisten en capas que contienen el request. Cuando llega un request, éste deberá pasar por diferentes capas o filtros (middlewares) quienes al final regresarán una respuesta. Cada uno de los filtros puede detener las peticiones en caso de que algo no cumpla.
 
 Si no se desea usar la protección CSRF se puede directamente quitar el middleware desde el archivo kernel.php. De la misma manera se pueden crear middleware propios y agregarlos aquí.
+
+Fake PUT/PATCH
+En Laravel cuando usamos recursos nos pone Put y Patch como una opción para modificar nuestros recursos. El problema de esto es que en un form no se puede especificar directamente que queremos hacer un Put o un Patch y por esto Laravel nos ofrece un mecanismo para hacer ”Fake PUT/PATCH” y podamos recibir y procesar los datos.
+
+Para que Laravel acepte el Put o Patch es necesario poner dentro del form de manera auxiliar @method(‘tipo de método usado’) y así aunque el form tenga un POST como método, realmente será traducido al que especifiquemos dentro del auxiliar.

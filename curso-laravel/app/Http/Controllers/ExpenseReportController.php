@@ -14,7 +14,7 @@ class ExpenseReportController extends Controller
      */
     public function index()
     {
-        return view('expenseReport.index',[
+        return view('expenseReport.index', [
             'expenseReports' => ExpenseReport::all()
         ]);
     }
@@ -63,7 +63,10 @@ class ExpenseReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $report = ExpenseReport::find($id);
+        return view('expenseReport.edit', [
+            'report' => $report
+        ]);
     }
 
     /**
@@ -75,7 +78,12 @@ class ExpenseReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //dd('put update');
+        $report = ExpenseReport::find($id);
+        $report->title = $request->get('title');
+        $report->save();
+
+        return redirect('/expense_reports');
     }
 
     /**
