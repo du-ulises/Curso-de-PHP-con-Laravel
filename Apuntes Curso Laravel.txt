@@ -110,3 +110,7 @@ Laravel incluye todos los errores de validación que podamos encontrar dentro de
 
 Se utiliza la línea vertical | para agregar más validaciones.
 Si un usuario se equivoca al llenar los campos de formulario y al intentarlo de nuevo debe ingresarlos todos otra vez, eso significará una mala experiencia de usuario y creará frustración. Por esto mismo se deben poner de nuevo los valores y para esto Laravel nos ofrece un auxiliar especial llamado old que podemos usar en el valor del campo.
+
+Creamos la vista de reportes
+El método show despliega la información específica para un recurso dado.
+Existe una técnica en Laravel llamada model binding que antes de llegar a la acción realiza el findOrFail y nos envía el objeto que se requiere.
