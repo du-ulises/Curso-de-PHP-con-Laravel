@@ -101,3 +101,12 @@ Con Javascript podemos mostrar una alerta al borrar una entrada que nos permita 
 Es bueno que las vistas hagan match con la acción porque permite encontrar rápidamente qué vista le pertenece a qué acción.
 Laravel nos ofrece el helper @method(‘delete’) ya que no se puede especificar directamente en el form.
 Tenemos con Laravel un método especial findOrFail que permitirá regresar un error 404 si un usuario está haciendo algo no válido al consultar o editar un registro en la base de datos.
+
+Validaciones
+Es muy importante validar siempre la información que los usuarios ingresan en el sistema. En la mayoría de los casos tendrás usuarios bien intencionados que sólo busquen hacer uso del sistema, pero puede ocurrir que haya algún atacante que quiera obtener información que no le pertenece.
+
+Cuando por ejemplo se hace submit a un form vacío, no vamos a querer que el usuario final vea los errores como son lanzados sino manejarlos de alguna manera, así que los validamos con ayuda de Laravel.
+Laravel incluye todos los errores de validación que podamos encontrar dentro de un objeto especial llamado errors el cual podemos usar en nuestro template.
+
+Se utiliza la línea vertical | para agregar más validaciones.
+Si un usuario se equivoca al llenar los campos de formulario y al intentarlo de nuevo debe ingresarlos todos otra vez, eso significará una mala experiencia de usuario y creará frustración. Por esto mismo se deben poner de nuevo los valores y para esto Laravel nos ofrece un auxiliar especial llamado old que podemos usar en el valor del campo.
