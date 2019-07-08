@@ -127,3 +127,12 @@ Trabajando con relaciones
 
 Acción para enviar un mail
 Siguiendo el proyecto que se viene trabajando en el curso, y también en muchos otros proyectos que realices puedes querer implementar un sistema de envío de mails por diferentes motivos, sea avisar a alguien de tu empresa que deba salir de viaje sobre algo que esté sucediendo o avisar a tus clientes de alguna acción que se esté llevando a cabo en tu sistema o haya sido completada.
+
+Enviando emails
+Para enviar correos electrónicos necesitamos usar algún servicio especializado en lugar de cuentas propias tipo gmail porque estas últimas tienden a bloquearse al detectar mucha actividad de envíos. mailtrap.io ofrece un servicio especial para probar cómo funciona el envío de correos durante el desarrollo de una aplicación.
+
+Dentro de tu cuenta de mailtrap tendrás tus diferentes bandejas de entrada y al entrar a ellas encontrarás las credenciales necesarias para configurar la aplicación. Lo más común es usar credenciales SMTP.
+En nuestro archivo .env encontraremos cómo configurar el envío de email. Necesitaremos el username y el password.
+La configuración real se hace siempre dentro de la carpeta config en el archivo mail.php
+PHP artisan nos provee el comando make:mail que se usa para crear una nueva clase de email. En Laravel los correos electrónicos son objetos que podemos trabajar con ciertas características e incluso darles un template para que sean rendereados.
+Laravel nos ofrece un facade llamado Mail que nos ayuda a hacer el envío.
