@@ -1,6 +1,7 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
+<div class="container">
     <div class="row">
         <div class="col">
             <h1>Edit Report {{ $report->id }} </h1>
@@ -35,4 +36,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection
