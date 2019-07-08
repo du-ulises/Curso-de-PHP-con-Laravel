@@ -60,6 +60,8 @@ El comando migrate:fresh lo reinicia todo incluyendo la base de datos y los elem
 Controladores y recursos
 CRUD significa create (crear), read (leer), update (actualizar o editar), delete (eliminar).
 
+php artisan make:controller --resource NameController
+
 resource genera una clase de controlador de tipo recurso. Esto significa que tendremos todo lo necesario para poder hacer CRUD.
 
 index: Aquí se despliegan todos los elementos a mostrar.
