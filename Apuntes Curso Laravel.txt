@@ -114,3 +114,9 @@ Si un usuario se equivoca al llenar los campos de formulario y al intentarlo de 
 Creamos la vista de reportes
 El método show despliega la información específica para un recurso dado.
 Existe una técnica en Laravel llamada model binding que antes de llegar a la acción realiza el findOrFail y nos envía el objeto que se requiere.
+
+Relaciones con eloquent
+Si estamos hablando de un blogpost, es posible que éste esté relacionado con múltiples comentarios y a su vez con un solo creador. Existen muchas maneras para relacionar bases de datos y esto nos ayudará a tener una integridad y una referencia hacia lo que necesitamos.
+-m o –migration son exactamente lo mismo y se pueden usar indistintamente.
+Haremos una relación de muchos a uno, es decir que un reporte puede tener muchos detalles.
+PHP en sus últimas versiones nos ofrece que todas las clases contienen la propiedad estática que es el nombre de la clase y la regresa directamente.
