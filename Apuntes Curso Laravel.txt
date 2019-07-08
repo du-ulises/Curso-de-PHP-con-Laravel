@@ -122,3 +122,8 @@ Si estamos hablando de un blogpost, es posible que éste esté relacionado con m
 -m o –migration son exactamente lo mismo y se pueden usar indistintamente.
 Haremos una relación de muchos a uno, es decir que un reporte puede tener muchos detalles.
 PHP en sus últimas versiones nos ofrece que todas las clases contienen la propiedad estática que es el nombre de la clase y la regresa directamente.
+
+Trabajando con relaciones
+
+Acción para enviar un mail
+Siguiendo el proyecto que se viene trabajando en el curso, y también en muchos otros proyectos que realices puedes querer implementar un sistema de envío de mails por diferentes motivos, sea avisar a alguien de tu empresa que deba salir de viaje sobre algo que esté sucediendo o avisar a tus clientes de alguna acción que se esté llevando a cabo en tu sistema o haya sido completada.

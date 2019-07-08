@@ -38,7 +38,7 @@ class ExpenseReportController extends Controller
     public function store(Request $request)
     {
         $validData = $request->validate([
-            'title'=>'required|min:3'
+            'title' => 'required|min:3'
         ]);
 
         $report = new ExpenseReport();
@@ -117,5 +117,19 @@ class ExpenseReportController extends Controller
         return view('expenseReport.confirmDelete', [
             'report' => $report
         ]);
+    }
+
+    public function confirmSendMail($id)
+    {
+        $report = ExpenseReport::findOrFail($id);
+        return view('expenseReport.confirmSendMail', [
+            'report' => $report
+        ]);
+    }
+
+    public function sendMail($id)
+    {
+        $report = ExpenseReport::findOrFail($id);
+        return $report;
     }
 }
